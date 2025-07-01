@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>الإمارات - أجمل الأماكن</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fff;
+      margin: 0;
+      padding: 20px;
+      direction: rtl;
+    }
+    h1 {
+      color: #0d47a1;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    .places {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .place-card {
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      background: #f9f9f9;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .place-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .place-info {
+      padding: 15px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .place-name {
+      font-size: 18px;
+      font-weight: bold;
+      color: #0d47a1;
+      margin-bottom: 10px;
+    }
+    .place-description {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 15px;
+      flex-grow: 1;
+    }
+    .btn-download {
+      background-color: #0d47a1;
+      border: none;
+      padding: 10px;
+      border-radius: 10px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-align: center;
+      text-decoration: none;
+      display: block;
+    }
+    .btn-download:hover {
+      background-color: #08306b;
+    }
+    #backBtn {
+      margin: 20px auto;
+      display: block;
+      background: #00796b;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      max-width: 150px;
+    }
+    #backBtn:hover {
+      background-color: #004d40;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>الإمارات - أجمل الأماكن السياحية والترفيهية</h1>
+
+  <div class="places">
+    <div class="place-card">
+      <img class="place-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Burj_Khalifa_in_Dubai_2010.jpg/320px-Burj_Khalifa_in_Dubai_2010.jpg" alt="برج خليفة"/>
+      <div class="place-info">
+        <div class="place-name">برج خليفة</div>
+        <div class="place-description">أطول برج في العالم بارتفاع 828 متر، وجهة سياحية عالمية في دبي.</div>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Burj_Khalifa_in_Dubai_2010.jpg/320px-Burj_Khalifa_in_Dubai_2010.jpg" download="Burj_Khalifa.jpg" class="btn-download">تحميل الصورة</a>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <img class="place-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Burj_Al_Arab_Jumeirah_Dubai_2009_05_27.jpg/320px-Burj_Al_Arab_Jumeirah_Dubai_2009_05_27.jpg" alt="برج العرب"/>
+      <div class="place-info">
+        <div class="place-name">برج العرب</div>
+        <div class="place-description">فندق فاخر على شكل شراع يقع في دبي، رمز الفخامة والرفاهية.</div>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Burj_Al_Arab_Jumeirah_Dubai_2009_05_27.jpg/320px-Burj_Al_Arab_Jumeirah_Dubai_2009_05_27.jpg" download="Burj_Al_Arab.jpg" class="btn-download">تحميل الصورة</a>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <img class="place-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Louvre_Abu_Dhabi_10-2013_img3.jpg/320px-Louvre_Abu_Dhabi_10-2013_img3.jpg" alt="لوفر أبوظبي"/>
+      <div class="place-info">
+        <div class="place-name">لوفر أبوظبي</div>
+        <div class="place-description">متحف فني عالمي يضم مجموعات متنوعة من مختلف الثقافات.</div>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Louvre_Abu_Dhabi_10-2013_img3.jpg/320px-Louvre_Abu_Dhabi_10-2013_img3.jpg" download="Louvre_Abu_Dhabi.jpg" class="btn-download">تحميل الصورة</a>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <img class="place-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Dubai_Marina_July_2020.jpg/320px-Dubai_Marina_July_2020.jpg" alt="مرسى دبي"/>
+      <div class="place-info">
+        <div class="place-name">مرسى دبي</div>
+        <div class="place-description">منطقة سياحية رائعة تضم مطاعم، مولات، ونشاطات بحرية.</div>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Dubai_Marina_July_2020.jpg/320px-Dubai_Marina_July_2020.jpg" download="Dubai_Marina.jpg" class="btn-download">تحميل الصورة</a>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <img class="place-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/IMG_20210121_145426.jpg/320px-IMG_20210121_145426.jpg" alt="حديقة الزهور"/>
+      <div class="place-info">
+        <div class="place-name">حديقة الزهور دبي</div>
+        <div class="place-description">حديقة رائعة تضم ملايين الزهور الملونة وأشكال فنية مذهلة.</div>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/IMG_20210121_145426.jpg/320px-IMG_20210121_145426.jpg" download="Dubai_Flower_Garden.jpg" class="btn-download">تحميل الصورة</a>
+      </div>
+    </div>
+  </div>
+
+  <button id="backBtn" onclick="goBack()">رجوع إلى الدول</button>
+
+  <script>
+    // تحقق تسجيل الدخول
+    if(localStorage.getItem('loggedIn') !== 'true') {
+      window.location.href = 'login.html';
+    }
+
+    function goBack() {
+      window.location.href = 'index.html';
+    }
+  </script>
+
+</body>
+</html>
