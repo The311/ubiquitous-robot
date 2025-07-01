@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>الخليج الجميل - الدول</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #e0f7fa;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+      direction: rtl;
+    }
+    h1 {
+      color: #00796b;
+      margin-bottom: 30px;
+    }
+    .countries {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+    .country-card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      width: 200px;
+      padding: 20px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .country-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    .country-flag {
+      width: 100px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+    .country-name {
+      font-size: 20px;
+      color: #004d40;
+      font-weight: bold;
+    }
+    #logoutBtn {
+      margin-top: 30px;
+      background-color: #00796b;
+      border: none;
+      padding: 10px 20px;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+    #logoutBtn:hover {
+      background-color: #004d40;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>اختر دولة لاستكشاف أجمل الأماكن في الخليج العربي</h1>
+  <div class="countries">
+    <div class="country-card" onclick="goToCountry('bahrain')">
+      <img src="https://flagcdn.com/w320/bh.png" alt="علم البحرين" class="country-flag"/>
+      <div class="country-name">البحرين</div>
+    </div>
+    <div class="country-card" onclick="goToCountry('qatar')">
+      <img src="https://flagcdn.com/w320/qa.png" alt="علم قطر" class="country-flag"/>
+      <div class="country-name">قطر</div>
+    </div>
+    <div class="country-card" onclick="goToCountry('saudi')">
+      <img src="https://flagcdn.com/w320/sa.png" alt="علم السعودية" class="country-flag"/>
+      <div class="country-name">السعودية</div>
+    </div>
+    <div class="country-card" onclick="goToCountry('uae')">
+      <img src="https://flagcdn.com/w320/ae.png" alt="علم الإمارات" class="country-flag"/>
+      <div class="country-name">الإمارات</div>
+    </div>
+  </div>
+
+  <button id="logoutBtn" onclick="logout()">تسجيل خروج</button>
+
+  <script>
+    // تحقق تسجيل الدخول
+    if(localStorage.getItem('loggedIn') !== 'true') {
+      window.location.href = 'login.html';
+    }
+
+    function goToCountry(country) {
+      window.location.href = country + '.html';
+    }
+
+    function logout() {
+      localStorage.clear();
+      window.location.href = 'login.html';
+    }
+  </script>
+
+</body>
+</html>
